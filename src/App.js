@@ -1,6 +1,5 @@
 import './App.css';
 import Home from './components/Home';
-import MedicineInformation from './components/Medicine';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (

@@ -151,9 +151,9 @@ h1 {
 
 
 .info-strength {
-    height: 58px;
+    height: 52px;
     overflow: hidden;
-    max-width: 68%;
+    max-width: 67%;
     flex-wrap: wrap;
     padding: 0 0px 0 5px;
     display: flex;
@@ -196,10 +196,12 @@ h1 {
     cursor: pointer;
     color: #0c2461;
 }
-.form_button{
-        margin: 8px 10px 8px 0 !important;
+
+.form_button {
+    margin: 8px 10px 8px 0 !important;
 
 }
+
 .strength_button {
     margin: 8px 10px 8px 0 !important;
 }

@@ -70,18 +70,21 @@ function CapsuleWebDevelopmentTest() {
     checkPackageOverflow();
 
 
-  }, [filteredMedicine]);
+  }, [filteredMedicine], isExpanded, isExpanded, isSpread, isOverflowingForm, isOverflowingPackage, isOverflowingStrength);
 
 
   function search(e) {
+    e.preventDefault();
+
     setDisplayText(input);
     setActiveButtonIndexForm(0)
     setActiveButtonIndexStrength(0)
     setActiveButtonIndexPackage(0)
-    setIsFree(false)
-    setIsExpanded(false)
-    setIsSpread(false)
-    e.preventDefault();
+    setIsOverflowingForm(false)
+    setIsOverflowingStrength(false)
+    setIsOverflowingPackage(false)
+
+
     const filtered = medicineInfo.filter(medicine =>
       medicine.salt.toLowerCase().includes(input.toLowerCase())
     );
@@ -128,12 +131,17 @@ function CapsuleWebDevelopmentTest() {
       alert("No Medicine Found");
     }
 
+    checkFormOverflow();
+    checkStrengthOverflow();
+    checkPackageOverflow();
   }
 
 
 
   const handleFormClick = (index, e) => {
-    checkStrengthOverflow()
+    isOverflowingForm(false)
+    isOverflowingPackage(false)
+    isOverflowingStrength(false)
     setIsExpanded(false)
     setIsSpread(false)
     setName(e)
