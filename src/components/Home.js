@@ -8,9 +8,9 @@ function CapsuleWebDevelopmentTest() {
   const [displayText, setDisplayText] = useState('');
   const [medicineInfo, setMedicineInfo] = useState([]);
   const [cards, setCards] = useState(false);
-  const [activeButtonIndexForm, setActiveButtonIndexForm] = useState(0); 
-  const [activeButtonIndexStrength, setActiveButtonIndexStrength] = useState(0); 
-  const [activeButtonIndexPackage, setActiveButtonIndexPackage] = useState(0); 
+  const [activeButtonIndexForm, setActiveButtonIndexForm] = useState(0);
+  const [activeButtonIndexStrength, setActiveButtonIndexStrength] = useState(0);
+  const [activeButtonIndexPackage, setActiveButtonIndexPackage] = useState(0);
   const [filteredMedicine, setFilteredMedicine] = useState([]);
   const [strength, setStrength] = useState(null)
   const [isExpanded, setIsExpanded] = useState(false);
@@ -56,7 +56,7 @@ function CapsuleWebDevelopmentTest() {
   };
 
 
-  
+
   useEffect(() => {
     axios.get("https://backend.cappsule.co.in/api/v1/new_search?q=paracetamol&pharmacyIds=1,2,3")
       .then((response) => {
@@ -75,7 +75,6 @@ function CapsuleWebDevelopmentTest() {
 
   function search(e) {
     setDisplayText(input);
-    console.log(e);
     setActiveButtonIndexForm(0)
     setActiveButtonIndexStrength(0)
     setActiveButtonIndexPackage(0)
@@ -92,28 +91,21 @@ function CapsuleWebDevelopmentTest() {
 
       const keys = (filtered[0].available_forms);
       const keys_mass = Object.keys(filtered[0].salt_forms_json[keys[0]]);
-      console.log(keys_mass);
       setWeight(keys_mass[0])
       setStrength(keys_mass)
       setStrengthObject(filtered[0].salt_forms_json[keys[0]])
       const keys_package = Object.keys(filtered[0].salt_forms_json[keys[0]]);
-      console.log(keys_package);
       let y = (Object.keys(filtered[0].salt_forms_json[keys[0]][keys_package[0]]));
-      console.log(y);
       setDose(y[0])
       setPackageObject(filtered[0].salt_forms_json[keys[0]][keys_package[0]]);
       setPackageValues(Object.keys(filtered[0].salt_forms_json[keys[0]][keys_package[0]]))
-      console.log((filtered[0].salt_forms_json[keys[0]][keys_package[0]])[(y[0])]);
-      console.log(keys);
       setName(keys[0])
       const valuesArray = Object.values((filtered[0].salt_forms_json[keys[0]][keys_package[0]])[(y[0])]); // Get values of the object at key 'e'
-      console.log(valuesArray);
 
       const isFullyNull = valuesArray.every(x => x === null);
       setAvailable(isFullyNull);
 
       if (isFullyNull) {
-        console.log("The array is fully null.");
         setPrice(
           [[{
             "pharmacy_id": 3,
@@ -130,7 +122,6 @@ function CapsuleWebDevelopmentTest() {
             x.push(value);
           }
         });
-        console.log(x);
         setPrice(x)
       }
     } else {
@@ -142,73 +133,49 @@ function CapsuleWebDevelopmentTest() {
 
 
   const handleFormClick = (index, e) => {
-    console.log(index);
     checkStrengthOverflow()
     setIsExpanded(false)
     setIsSpread(false)
     setName(e)
     setActiveButtonIndexForm(index);
-    setActiveButtonIndexStrength(0) 
-    console.log(filteredMedicine);
+    setActiveButtonIndexStrength(0)
 
     setStrengthObject(filteredMedicine[0].salt_forms_json[e]);
-    console.log(filteredMedicine[0].salt_forms_json[e]);
     const strength_keys = Object.keys(filteredMedicine[0].salt_forms_json[e]);
     setStrength(strength_keys);
     const object = strength_keys[0];
-    console.log(object);
 
     const x = filteredMedicine[0].salt_forms_json[e];
-    console.log(x);
 
     if (x.hasOwnProperty(object)) {
       const package_keys = Object.keys(x[object]);
-      console.log(package_keys);
       setPackageValues(package_keys)
-     
-    } else {
-      console.log("Property does not exist in the object.");
+
     }
 
   };
 
   const handleStrengthClick = (position, e) => {
-    setActiveButtonIndexStrength(position); 
+    setActiveButtonIndexStrength(position);
     setActiveButtonIndexPackage(0)
     setWeight(e)
 
     setIsSpread(false)
 
 
-    console.log(e);
-
-    console.log(strengthObject);
     const packaging_keys = Object.keys(strengthObject);
 
-    console.log(packaging_keys);
     const index = packaging_keys.indexOf(e);
-    if (index !== -1) {
-      console.log(index);
-    } else {
-      console.log("no data found");
-    }
+
 
     const valuesArray = Object.values(strengthObject);
     setPackageObject(valuesArray[index]);
-    console.log(valuesArray);
 
-
-    console.log(e);
     const package_values = Object.keys(valuesArray[index]);
     setPackageValues(Object.keys(valuesArray[index]));
-    console.log(package_values[0]);
     setDose(package_values[0])
-    console.log();
-    console.log(strengthObject[e]);
     const Array = Object.values(strengthObject[e]); // Get values of the object at key 'e'
-    console.log(Array[0]);
     const values = Object.values(Array[0]);
-    console.log(values);
     setPrice(values)
 
 
@@ -216,7 +183,6 @@ function CapsuleWebDevelopmentTest() {
     setAvailable(isFullyNull); // Set availability state
 
     if (isFullyNull) {
-      console.log("The array is fully null.");
       setPrice(
         [[{
           "pharmacy_id": 3,
@@ -230,10 +196,9 @@ function CapsuleWebDevelopmentTest() {
       let x = []
       values.forEach(val => {
         if (val !== null) {
-          x.push(val); 
+          x.push(val);
         }
       });
-      console.log(x);
       setPrice(x)
     }
 
@@ -244,20 +209,15 @@ function CapsuleWebDevelopmentTest() {
   const handlePackagingClick = (position, e) => {
     setDose(e)
     setActiveButtonIndexPackage(position);
-    console.log(e); 
-    console.log(packageObject);
 
     if (packageObject && packageObject.hasOwnProperty(e)) {
-      console.log(packageObject[e]);
 
-      const valuesArray = Object.values(packageObject[e]); 
-      console.log(valuesArray);
+      const valuesArray = Object.values(packageObject[e]);
 
       const isFullyNull = valuesArray.every(x => x === null);
-      setAvailable(isFullyNull); 
+      setAvailable(isFullyNull);
 
       if (isFullyNull) {
-        console.log("The array is fully null.");
         setPrice(
           [[{
             "pharmacy_id": 3,
@@ -271,16 +231,15 @@ function CapsuleWebDevelopmentTest() {
         let x = []
         valuesArray.forEach(value => {
           if (value !== null) {
-            x.push(value); 
+            x.push(value);
           }
         });
-        console.log(x);
         setPrice(x)
       }
     }
   };
   const capitalizeFirstLetter = string => {
-    if (!string) return string; 
+    if (!string) return string;
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
@@ -331,7 +290,7 @@ function CapsuleWebDevelopmentTest() {
                     <div className="strength">
                       <p className="strength_para">Strength :</p>
                       <div ref={strengthRef} className={isExpanded ? 'info-strength strength-expanded' : "info-strength"}>
-                        {strength && 
+                        {strength &&
                           strength.map((e, index) => (
                             <button
                               onClick={() => handleStrengthClick(index, e)}
@@ -351,8 +310,8 @@ function CapsuleWebDevelopmentTest() {
                     <div className="packaging">
                       <p>Packaging :</p>
                       <div ref={packageRef} className={isSpread ? 'info-packaging package-expanded' : 'info-packaging'}>
-                       
-                        {packageValues && 
+
+                        {packageValues &&
                           packageValues.map((e, index) => (
 
                             <button
