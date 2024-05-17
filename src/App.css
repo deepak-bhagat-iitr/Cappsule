@@ -153,7 +153,7 @@ h1 {
 .info-strength {
     height: 52px;
     overflow: hidden;
-    max-width: 68%;
+    max-width: 72%;
     flex-wrap: wrap;
 
     display: flex;
