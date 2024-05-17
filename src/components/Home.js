@@ -105,7 +105,9 @@ function CapsuleWebDevelopmentTest() {
 
       const isFullyNull = valuesArray.every(x => x === null);
       setAvailable(isFullyNull);
-
+      checkFormOverflow();
+      checkStrengthOverflow();
+      checkPackageOverflow();
       if (isFullyNull) {
         setPrice(
           [[{
@@ -124,6 +126,7 @@ function CapsuleWebDevelopmentTest() {
           }
         });
         setPrice(x)
+
       }
     } else {
       alert("No Medicine Found");
