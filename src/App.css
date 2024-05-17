@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /* margin: 35px 0 0 0; */
+}
+
+header {
+    /* background-color: #F0F2F5; */
+    /* padding: 20px 0; */
+    text-align: center;
+    place-content: center;
+    height: 150px;
+    font-size: 24px;
+    /* margin: 0px 0 10px 0; */
+}
+
+.search_container {
+    /* font-size: larger; */
+    max-width: 65%;
+    margin: 0 auto;
+    /* padding: 0 20px; */
+}
+
+.search_container hr {
+    border: 0.8px solid #a4b0be;
+
+
+    opacity: 0.6;
+    /* Adjust opacity to make it lighter */
+}
+
+h1 {
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 8px 28px 8px 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 25px;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); */
+    flex: 1;
+}
+
+.search-box input::placeholder {
+    font-size: 16px;
+    color: #2f3640;
+}
+
+.magnifying-glass-icon {
+    color: #718093;
+    font-size: 18px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    place-content: center;
+    min-height: 70.7vh;
+    color: #576574;
+    /* background-color: blueviolet; */
+}
+
+.search-box button {
+    padding: 0px 15px;
+    background-color: transparent;
+    color: #273c75;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.content q {
+    font-size: larger;
+    color: #747d8c;
+    align-self: center;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.medicine_container {
+    min-height: 300px;
+    width: 100%;
+    margin: 40px 0 0 0;
+    /* border: 1px solid black; */
+}
+
+.medicine {
+    background: linear-gradient(to right, #FFFFFF, #F7FBFA, #d9f4f3);
+    width: 65%;
+    min-height: 250px;
+    /* border: 1px solid black; */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
+
+    margin: 0 auto 45px;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 20px 20px;
+    display: flex;
+    /* flex-wrap: wrap; */
+
+}
+
+.medicine_info {
+    min-width: 35%;
+    max-width: 47%;
+
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.medicine-item p {
+    color: #535c68;
+    font-weight: 500;
+}
+
+.form {
+    /* justify-content: center; */
+    align-items: center;
+    display: flex;
+    margin: 0 0 0px 0;
+
+}
+
+.strength {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.info-form {
+    height: 60px;
+    overflow: hidden;
+    max-width: 32%;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.info-strength {
+    height: 58px;
+    overflow: hidden;
+    max-width: 68%;
+    flex-wrap: wrap;
+    padding: 0 0px 0 5px;
+    /* padding: 0 5px; */
+    display: flex;
+    align-items: center;
+
+}
+
+.info-packaging {
+    height: 55px;
+    max-width: 52%;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding: 0 0 0px 3px;
+    display: flex;
+    align-items: center;
+}
+
+.strength-expanded {
+    /* padding: 5px 3px; */
+    height: auto;
+    margin: 5px 0;
+    /* width: 66%; */
+    /* Expand the content to show all */
+}
+
+.package-expanded {
+    /* padding: 5px 3px; */
+    height: auto;
+    /* width: 66%; */
+    /* Expand the content to show all */
+}
+
+.form-expanded {
+    /* padding: 5px 3px; */
+    height: auto;
+    /* width: 35%; */
+    /* Expand the content to show all */
+}
+
+
+
+
+
+.show-more {
+    margin: 0 0 5px 0;
+
+    align-self: center;
+    font-weight: 500;
+    cursor: pointer;
+    color: #0c2461;
+}
+.form_button{
+        margin: 8px 10px 8px 0 !important;
+
+}
+.strength_button {
+    margin: 8px 10px 8px 0 !important;
+}
+
+.package-button {
+    margin: 8px 10px 8px 0 !important;
+}
+
+/* .strength_para{
+    width: 107px;
+} */
+.packaging {
+    /* justify-content: center; */
+    align-items: center;
+    display: flex;
+    /* margin: 6px 0 0px 0; */
+    /* justify-content: center; */
+}
+
+
+.medicine_info p {
+    width: 107px;
+}
+
+.price {
+    /* place-content: center; */
+    align-self: center;
+    /* align-content: center; */
+    text-align: center;
+    width: 22%;
+    font-size: large
+}
+
+.medicine-details {
+    align-self: center;
+}
+
+.medicine-details h4 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 3px 0;
+}
+
+.glow-button {
+    background-color: transparent;
+    color: #4e595d;
+    /* height: 100%; */
+    outline: none;
+    padding: 6px 10px;
+    border: 2px solid #95a5a6;
+    border-radius: 10px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.active {
+    box-shadow: 0 0 5px 4px rgba(75, 207, 150, 0.5);
+    outline: none;
+    background-color: transparent;
+    color: #353b48;
+    /* font-weight: 800; */
+    padding: 6px 10px;
+    border: 2px solid #353b48;
+    border-radius: 10px;
+    cursor: pointer;
+    position: static;
+}
+
+.message-box {
+    border: 1px solid #b2dfdb;
+    /* Match the border color */
+    border-radius: 6px;
+    /* Slightly rounded corners */
+    padding: 10px 10px;
+    /* Padding inside the box */
+    background-color: #ffffff;
+    /* White background */
+    color: #333333;
+    /* Text color */
+    font-size: 16px;
+    /* Font size */
+    font-weight: 500;
+    text-align: center;
+    /* Centered text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+}
