@@ -9,24 +9,18 @@
 
 body {
     min-height: 100vh;
-    /* margin: 35px 0 0 0; */
 }
 
 header {
-    /* background-color: #F0F2F5; */
-    /* padding: 20px 0; */
     text-align: center;
     place-content: center;
     height: 150px;
     font-size: 24px;
-    /* margin: 0px 0 10px 0; */
 }
 
 .search_container {
-    /* font-size: larger; */
     max-width: 65%;
     margin: 0 auto;
-    /* padding: 0 20px; */
 }
 
 .search_container hr {
@@ -34,7 +28,6 @@ header {
 
 
     opacity: 0.6;
-    /* Adjust opacity to make it lighter */
 }
 
 h1 {
@@ -58,7 +51,6 @@ h1 {
     outline: none;
     font-size: 15px;
     border-radius: 25px;
-    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); */
     flex: 1;
 }
 
@@ -75,11 +67,9 @@ h1 {
 .content {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     place-content: center;
     min-height: 70.7vh;
     color: #576574;
-    /* background-color: blueviolet; */
 }
 
 .search-box button {
@@ -100,27 +90,16 @@ h1 {
     font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
 .medicine_container {
     min-height: 300px;
     width: 100%;
     margin: 40px 0 0 0;
-    /* border: 1px solid black; */
 }
 
 .medicine {
     background: linear-gradient(to right, #FFFFFF, #F7FBFA, #d9f4f3);
     width: 65%;
     min-height: 250px;
-    /* border: 1px solid black; */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.08);
 
     margin: 0 auto 45px;
@@ -128,7 +107,6 @@ h1 {
     border-radius: 10px;
     padding: 20px 20px;
     display: flex;
-    /* flex-wrap: wrap; */
 
 }
 
@@ -149,7 +127,6 @@ h1 {
 }
 
 .form {
-    /* justify-content: center; */
     align-items: center;
     display: flex;
     margin: 0 0 0px 0;
@@ -179,7 +156,6 @@ h1 {
     max-width: 68%;
     flex-wrap: wrap;
     padding: 0 0px 0 5px;
-    /* padding: 0 5px; */
     display: flex;
     align-items: center;
 
@@ -196,25 +172,16 @@ h1 {
 }
 
 .strength-expanded {
-    /* padding: 5px 3px; */
     height: auto;
     margin: 5px 0;
-    /* width: 66%; */
-    /* Expand the content to show all */
 }
 
 .package-expanded {
-    /* padding: 5px 3px; */
     height: auto;
-    /* width: 66%; */
-    /* Expand the content to show all */
 }
 
 .form-expanded {
-    /* padding: 5px 3px; */
     height: auto;
-    /* width: 35%; */
-    /* Expand the content to show all */
 }
 
 
@@ -241,15 +208,9 @@ h1 {
     margin: 8px 10px 8px 0 !important;
 }
 
-/* .strength_para{
-    width: 107px;
-} */
 .packaging {
-    /* justify-content: center; */
     align-items: center;
     display: flex;
-    /* margin: 6px 0 0px 0; */
-    /* justify-content: center; */
 }
 
 
@@ -258,9 +219,7 @@ h1 {
 }
 
 .price {
-    /* place-content: center; */
     align-self: center;
-    /* align-content: center; */
     text-align: center;
     width: 22%;
     font-size: large
@@ -280,7 +239,6 @@ h1 {
 .glow-button {
     background-color: transparent;
     color: #4e595d;
-    /* height: 100%; */
     outline: none;
     padding: 6px 10px;
     border: 2px solid #95a5a6;
@@ -294,7 +252,6 @@ h1 {
     outline: none;
     background-color: transparent;
     color: #353b48;
-    /* font-weight: 800; */
     padding: 6px 10px;
     border: 2px solid #353b48;
     border-radius: 10px;
@@ -304,20 +261,12 @@ h1 {
 
 .message-box {
     border: 1px solid #b2dfdb;
-    /* Match the border color */
     border-radius: 6px;
-    /* Slightly rounded corners */
     padding: 10px 10px;
-    /* Padding inside the box */
     background-color: #ffffff;
-    /* White background */
     color: #333333;
-    /* Text color */
     font-size: 16px;
-    /* Font size */
     font-weight: 500;
     text-align: center;
-    /* Centered text */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
 }
